@@ -76,7 +76,7 @@ Body:
 | ----- | ---- | ----------------- | ----- | 
 | `vehicle_id` | UUID | Required | Provided by the Vehicle Registration API | 
 | `timestamp` | Unix Timestamp | Required | Time of day (UTC) data was sampled | 
-| `gps_pos` | Point | Required | GPS location at the time of status change  |
+| `gps_pos` | location | Required | GPS location at the time of status change  |
 | `reason_code` | Enum | Required | [Reason](#reason_code) for status change.  |
 | `service_start` | Boolean | Required | `True` if service start, `False` if return from servicing |
 
@@ -159,7 +159,7 @@ Body:
 | ----- | -------- | ----------------- | ----- |
 | `trip_id` | UUID |  | Issued by InitMovementPlan() API | 
 | `timestamp` | Unix Timestamp | Required | Time of day (UTC) data was sampled| 
-| `location` | Point | Required | GPS location in decimal degrees at time of sample  |
+| `location` | Lat,Lng String | Required | GPS location in decimal degrees at time of sample  |
 
 Response:
 
@@ -179,7 +179,7 @@ Body:
 | ----- | -------- | ----------------- | ----- |
 | `trip_id` | UUID | Required | Issued by InitMovementPlan() API  | 
 | `timestamp` | Unix Timestamp | Required | Time of day (UTC) data was sampled|
-| `location` | Point | Required | GPS location in decimal degrees at time of sample  |
+| `location` | Lat,Lng String | Required | GPS location in decimal degrees at time of sample  |
 
 Response:
 
@@ -197,7 +197,7 @@ Body:
 
 | Field | Type     | Required/Optional | Other |
 | ----- | -------- | ----------------- | ----- |
-| `location` | Point  | Required | Current Location  | 
+| `location` | String  | Required | Current Location  | 
 | `timestamp` | Unix Timestamp | Required | Time of day (UTC) data was sampled|
 
 Response: 
